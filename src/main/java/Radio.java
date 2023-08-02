@@ -1,14 +1,22 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
     private int currentRadioStation;
     private int soundVolume;
-    private int numberOfRadioStations;
+    private int numberOfRadioStations = 10;
+
+
+
 
     public Radio(int numberOfRadioStations) {
-        this.numberOfRadioStations = numberOfRadioStations;
-    }
 
-    public Radio() {
-        this.numberOfRadioStations = 10;
+        this.numberOfRadioStations = numberOfRadioStations;
     }
 
     public int getCurrentRadioStation() {
